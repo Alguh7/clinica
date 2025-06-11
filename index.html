@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womam's health</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <section>
+            <div class="center">
+                <div class="logo">
+                    <h1>Womam's health</h1>
+                </div><!--logo-->
+                <div class="menu">
+                    <a href="#Home">Home</a></li>
+                    <a href="#about">Sobre</a></li>
+                    <a href="#Exames">Exames</a>
+                    <a href="#Endereços">Endereços</a>
+                    <a href="#Contatos">Contatos</a>
+
+                </div><!--menu-->
+            </div><!--center-->
+        </section>
+    </header>
+    <div class="home-container">
+        <section id="home">
+            <div class="centert">
+                <h3>Aqui na Womam's health
+                    <br>realizamos todos os exames
+                    <br> que você
+                    precisa fazer para cuidar de si mesma.
+                </h3>
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
+        </section>
+    </div>
+    <section class="about" id="about">
+        <h2 class="title">Sobre <span>nós</span></h2>
+        <div class="row">
+            <div class="conteiner">
+                <img src="img/depositphotos_29938467-stock-photo-doctor-and-nurse-with-patient.jpg" alt="Sobre nós">
+            </div>
+            <div class="content">
+                <h3>Quem somos</h3>
+                <p> A Woman's Health é uma plataforma dedicada ao cuidado integral da saúde da mulher. Aqui, você
+                    encontra um espaço acolhedor e seguro para agendar seus exames, tirar dúvidas sobre o seu corpo e
+                    receber orientações de profissionais especializados.
+
+                <p>Nosso objetivo é garantir que toda mulher tenha acesso fácil e rápido a informações confiáveis e
+                    serviços de saúde de qualidade. Sabemos que cuidar da saúde vai muito além de consultas médicas — é
+                    sobre se sentir ouvida, respeitada e bem informada.</p>
+
+            </div>
+    </section>
+    <section class="exames" id="Exames">
+        <h2 class="title">Faça seus exames com cuidado, segurança e acolhimento</h2>
+        <div class="box-container">
+            <div class="box">
+                <img src="img/Icone_Ginecologia_roxo-75.svg" alt="exame1">
+                <h3>Ginecologia Diagnostica</h3>
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
+            <div class="box">
+                <img src="img/icone-ultrassonografia-roxo-75.svg" alt="exame2">
+                <h3>Ultrassonografia</h3>
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
+            <div class="box">
+                <img src="img/icone-ressonancia-magnetica-roxo-75.svg" alt="exame3">
+                <h3>Ressonancia Magnetica</h3>
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
+            <div class="box">
+                <img src="img/icone-medicina-fetal-roxo-75-.svg" alt="exame4">
+                <h3>Medicina Fetal</h3>
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
+            <div class="box">
+                <img src="img/icone-imagenologia-mamaria-roxo-75.svg" alt="exame5">
+                <h3>Imagenologia Mamaria</h3>
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
+            <div class="box">
+                <img src="img/icone-densitometria-ossea-75.svg" alt="exame6">
+                <h3>Densitometria Ossea</h3>
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
+            <div class="box">
+                <img src="img/icone-genetica-roxo-75.svg" alt="exame6">
+                <h3>Genetica</h3>
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
+            <div class="box">
+                <img src="img/icone-analise-clinica-roxo-75.svg" alt="exame6">
+                <h3>Análise Clinica</h3>
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
+
+    </section>
+    <!-- Chatbot fixo -->
+    <style>
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            font-family: Arial, sans-serif;
+        }
+
+        #openChat {
+            background-color: rebeccapurple;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            font-size: 16px;
+        }
+
+        .chat-window {
+            display: none;
+            /* fica escondido no começo */
+            flex-direction: column;
+            width: 320px;
+            height: 400px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            margin-top: 10px;
+        }
+
+        .chat-header {
+            background: rebeccapurple;
+            color: white;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            font-size: 14px;
+        }
+
+        .chat-body p {
+            margin: 8px 0;
+        }
+
+        .chat-body .bot {
+            color: #333;
+        }
+
+        .chat-body .user {
+            color: rebeccapurple;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        #chatInput {
+            border: none;
+            border-top: 1px solid #ddd;
+            padding: 10px;
+            font-size: 14px;
+            outline: none;
+            border-radius: 0 0 10px 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <div class="chatbot">
+        <button id="openChat">💬 Chat</button>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">Ana - Assistente Virtual</div>
+            <div class="chat-body" id="chatBody"></div>
+            <input type="text" id="chatInput" placeholder="Digite aqui..." autocomplete="off" />
+        </div>
+    </div>
+
+    <script>
+        const openChatBtn = document.getElementById("openChat");
+        const chatWindow = document.getElementById("chatWindow");
+        const chatBody = document.getElementById("chatBody");
+        const chatInput = document.getElementById("chatInput");
+
+        let stage = 0;
+        let userData = {};
+
+        function appendBot(msg) {
+            const p = document.createElement("p");
+            p.classList.add("bot");
+            p.innerText = msg;
+            chatBody.appendChild(p);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function appendUser(msg) {
+            const p = document.createElement("p");
+            p.classList.add("user");
+            p.innerText = msg;
+            chatBody.appendChild(p);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        openChatBtn.addEventListener("click", () => {
+            if (chatWindow.style.display === "flex") {
+                chatWindow.style.display = "none";
+            } else {
+                chatWindow.style.display = "flex";
+                chatWindow.style.flexDirection = "column";
+                if (stage === 0) {
+                    appendBot("Olá! Eu sou a Ana, sua assistente virtual de Agendamento de Exames.");
+                    appendBot("Qual é o seu nome?");
+                    stage = 1;
+                }
+                chatInput.focus();
+            }
+        });
+
+        chatInput.addEventListener("keypress", function (e) {
+            if (e.key === "Enter" && chatInput.value.trim() !== "") {
+                const input = chatInput.value.trim();
+                appendUser(input);
+                chatInput.value = "";
+
+                if (stage === 1) {
+                    userData.nome = input;
+                    appendBot(`Prazer, ${userData.nome}! Quais exames você gostaria de agendar?`);
+                    stage = 2;
+                } else if (stage === 2) {
+                    userData.exames = input;
+                    appendBot("Qual a data desejada para os exames? (formato: DD/MM/AAAA)");
+                    stage = 3;
+                } else if (stage === 3) {
+                    const regex = /^\d{2}\/\d{2}\/\d{4}$/;
+                    if (!regex.test(input)) {
+                        appendBot("Formato inválido. Use DD/MM/AAAA.");
+                    } else {
+                        userData.data = input;
+                        appendBot("Resumo do agendamento:");
+                        appendBot(`Nome: ${userData.nome}`);
+                        appendBot(`Exames: ${userData.exames}`);
+                        appendBot(`Data: ${userData.data}`);
+                        appendBot("Seu agendamento foi registrado com sucesso! ✅");
+                        stage = 4;
+                    }
+                } else {
+                    appendBot("Se precisar de algo mais, é só me chamar!");
+                }
+            }
+        });
+    </script>
+     <section class="about" id="Endereços">
+            <h2 class="title">Nossos <span>Endereços</span></h2>
+            <div class="row">
+                <div class="conteiner-img">
+                    <img src="img/29092023-HM-REFERENCIA-SAUDE-MULHER-CC-scaled.jpg" alt="Endereços">
+                </div>
+                 <div class="content">
+                     <h3>Endereços</h3>
+                     <p>Estamos presentes em diversos pontos da cidade de São Paulo para estar sempre perto de você. Com unidades estrategicamente localizadas, oferecemos mais comodidade, fácil acesso e o mesmo padrão de qualidade em todas as nossas clínicas.
+
+                    </p><ul>
+                   
+                    <li>Morumbi</li>
+                        <li>Itaquera</li>
+                        <li>Mooca</li>
+                        <li>Santo Andre</li>
+                        <li>Diadema</li>
+                        <li>Itaim Bibi</li>
+                        <li>Interlagos</li>
+                    </ul>
+                      
+                        
+            </div>
+        </div>
+        </section>
+        <section class="about" id="Contatos">
+            <h2 class="title">Nossos <span>Contatos</span></h2>
+            <div class="row">
+                <div class="contato-img">
+                    <img width="30" height="30" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1"/>
+                    (11) 9 9999-9999
+                    <img width="30" height="30" src="https://img.icons8.com/3d-fluency/94/instagram-logo.png" alt="instagram-logo"/>
+                    @ClinicaWoman's Health
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/>
+                    WomansHealth
+                    <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/new-post.png" alt="new-post"/>
+                     ClinicaWoman@gmail.com
+</body>
+
+</html>
